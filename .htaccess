@@ -1,5 +1,5 @@
 <IfModule mod_headers.c>
-    RequestHeader set X-Prerender-Token "4kgLPz3osM2GZyKDG0KJ"
+    # RequestHeader set X-Prerender-Token "C9M5st7q3Ed8GYjsdpYZ"
 </IfModule>
 
 <IfModule mod_rewrite.c>
@@ -10,7 +10,7 @@
         RewriteCond %{QUERY_STRING} _escaped_fragment_
 
         # Only proxy the request to Prerender if it's a request for HTML
-        RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(.*) http://service.prerender.io/http://www.goncaloneves.com/$2 [P,L]
+        RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(.*) http://service.prerender.io/http://goncaloneves.com/$2 [P,L]
     </IfModule>
 
     # Don't rewrite files or directories
