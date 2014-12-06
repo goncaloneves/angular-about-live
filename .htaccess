@@ -7,6 +7,10 @@ Options +FollowSymLinks
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Redirect requests non www to www
+  RewriteCond %{HTTP_HOST} !^www\.
+  RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
   <IfModule mod_proxy_http.c>
     RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot [NC,OR]
     RewriteCond %{QUERY_STRING} _escaped_fragment_
