@@ -3,6 +3,8 @@
 </IfModule>
 
 Options +FollowSymLinks
+AddType text/css .css
+AddType text/javascript .js
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
